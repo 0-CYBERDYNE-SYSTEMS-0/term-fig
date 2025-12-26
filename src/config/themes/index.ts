@@ -1,0 +1,137 @@
+import type { ColorScheme, ThemeName } from '../../types/config';
+
+// Import comprehensive themes
+import { comprehensiveThemes, filterDuplicateThemes } from './comprehensive-themes';
+
+// Merge existing specific themes with comprehensive library
+const allThemes: Record<string, ColorScheme> = {
+  // Catppuccin variants
+  'catppuccin-mocha': {
+    name: 'Catppuccin Mocha',
+    colors: {
+      background: '#1e1e2e',
+      foreground: '#cdd6f4',
+      cursor: '#f5e0dc',
+      black: '#45475a',
+      red: '#f38ba8',
+      green: '#a6e3a1',
+      yellow: '#f9e2af',
+      blue: '#89b4fa',
+      magenta: '#f5c2e7',
+      cyan: '#94e2d5',
+      white: '#bac2de',
+      brightBlack: '#585b70',
+      brightRed: '#f38ba8',
+      brightGreen: '#a6e3a1',
+      brightYellow: '#f9e2af',
+      brightBlue: '#89b4fa',
+      brightMagenta: '#f5c2e7',
+      brightCyan: '#94e2d5',
+      brightWhite: '#a6adc8',
+    },
+  },
+  'catppuccin-macchiato': {
+    name: 'Catppuccin Macchiato',
+    colors: {
+      background: '#24273a',
+      foreground: '#cad3f5',
+      cursor: '#f4dbd6',
+      black: '#494d64',
+      red: '#ed8796',
+      green: '#a6da95',
+      yellow: '#eed49f',
+      blue: '#8aadf4',
+      magenta: '#f5bde6',
+      cyan: '#8bd5ca',
+      white: '#b8c0e0',
+      brightBlack: '#5b6078',
+      brightRed: '#ed8796',
+      brightGreen: '#a6da95',
+      brightYellow: '#eed49f',
+      brightBlue: '#8aadf4',
+      brightMagenta: '#f5bde6',
+      brightCyan: '#8bd5ca',
+      brightWhite: '#a5adcb',
+    },
+  },
+  'catppuccin-frappe': {
+    name: 'Catppuccin Frappé',
+    colors: {
+      background: '#303446',
+      foreground: '#c6d0f5',
+      cursor: '#f2d5cf',
+      black: '#51576d',
+      red: '#e78284',
+      green: '#a6d189',
+      yellow: '#e5c890',
+      blue: '#8caaee',
+      magenta: '#f4b8e4',
+      cyan: '#81c8be',
+      white: '#b5bfe2',
+      brightBlack: '#626880',
+      brightRed: '#e78284',
+      brightGreen: '#a6d189',
+      brightYellow: '#e5c890',
+      brightBlue: '#8caaee',
+      brightMagenta: '#f4b8e4',
+      brightCyan: '#81c8be',
+      brightWhite: '#a5adce',
+    },
+  },
+  'catppuccin-latte': {
+    name: 'Catppuccin Latte',
+    colors: {
+      background: '#eff1f5',
+      foreground: '#4c4f69',
+      cursor: '#dc8a78',
+      black: '#bcc0cc',
+      red: '#d20f39',
+      green: '#40a02b',
+      yellow: '#df8e1d',
+      blue: '#1e66f5',
+      magenta: '#ea76cb',
+      cyan: '#179299',
+      white: '#acb0be',
+      brightBlack: '#9ca0b0',
+      brightRed: '#d20f39',
+      brightGreen: '#40a02b',
+      brightYellow: '#df8e1d',
+      brightBlue: '#1e66f5',
+      brightMagenta: '#ea76cb',
+      brightCyan: '#179299',
+      brightWhite: '#6c6f85',
+    },
+  },
+  custom: {
+    name: 'Custom',
+    colors: {
+      background: '#1e1e2e',
+      foreground: '#cdd6f4',
+      cursor: '#f5e0dc',
+      black: '#45475a',
+      red: '#f38ba8',
+      green: '#a6e3a1',
+      yellow: '#f9e2af',
+      blue: '#89b4fa',
+      magenta: '#f5c2e7',
+      cyan: '#94e2d5',
+      white: '#bac2de',
+      brightBlack: '#585b70',
+      brightRed: '#f38ba8',
+      brightGreen: '#a6e3a1',
+      brightYellow: '#f9e2af',
+      brightBlue: '#89b4fa',
+      brightMagenta: '#f5c2e7',
+      brightCyan: '#94e2d5',
+      brightWhite: '#a6adc8',
+    },
+  },
+  ...comprehensiveThemes,
+};
+
+// Filter out duplicates using shared utility
+export const filteredThemes = filterDuplicateThemes(allThemes);
+
+// Export all themes and names
+export const themes = allThemes;
+export const themeNames = Object.keys(themes) as ThemeName[];
