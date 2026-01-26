@@ -44,22 +44,22 @@ npm run preview
 
 ```
 src/
-├── components/
-│   ├── ui/                    # shadcn/ui base components
-│   ├── config-editor/          # Settings sidebar components
-│   ├── preview/               # Terminal preview component
-│   └── terminal-select/       # Terminal selector and export dialog
-├── config/
-│   ├── schemas/               # Terminal type schemas
-│   ├── generators/            # Config file generators
-│   └── themes/               # Color scheme definitions
-├── hooks/
-│   └── useConfig.ts          # Config state management
-├── types/
-│   └── config.ts            # TypeScript type definitions
-├── lib/
-│   └── utils.ts             # Utility functions
-└── App.tsx                  # Main application component
+ components/
+    ui/                    # shadcn/ui base components
+    config-editor/          # Settings sidebar components
+    preview/               # Terminal preview component
+    terminal-select/       # Terminal selector and export dialog
+ config/
+    schemas/               # Terminal type schemas
+    generators/            # Config file generators
+    themes/               # Color scheme definitions
+ hooks/
+    useConfig.ts          # Config state management
+ types/
+    config.ts            # TypeScript type definitions
+ lib/
+    utils.ts             # Utility functions
+ App.tsx                  # Main application component
 ```
 
 ## Tech Stack
