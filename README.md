@@ -1,5 +1,7 @@
 # Terminal Config Generator
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
 A beautiful web-based configuration generator for WezTerm, Kitty, Ghostty, and iTerm2 terminal emulators. Visually customize your terminal settings, preview changes in real-time, and export ready-to-use configuration files.
 
 ## Features
